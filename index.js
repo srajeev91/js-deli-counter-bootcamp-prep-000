@@ -12,3 +12,15 @@ function nowServing(katzDeliLine) {
     return `Currently serving ${katzDeliLine.shift()}.`;
   }
 }
+
+function currentLine(line) {
+  var realTime = [];
+  if (line.length === 0){
+    return `The line is currenty empty.`;
+  } else {
+    for (let i = 0; i < line.length; i++) {
+      realTime.push(` ${i + 1}. ${line[i]}`);
+    }
+  }
+  return `The line is currently:${realTime}`; 
+}
